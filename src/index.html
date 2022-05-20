@@ -6,8 +6,36 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/img/urku-ico.svg">
+  <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+  <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+  <link rel="stylesheet" href="assets/css/urku.css">
 </head>
-<body>
+<body class="top-fixed">
+
   <app-root></app-root>
+
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="assets/js/pe-hoverimage.js"></script>
+    <script>
+      var flexHover = new peHoverImg();
+      flexHover.init({
+        reverse: true
+      });
+      
+      var staticHover = new peHoverImg();
+      staticHover.init({
+        elems: '.rk-item-static--hover',
+        transition: '1.3s'
+      });
+      
+      var masonryHover = new peHoverImg();
+      masonryHover.init({
+        elems: '.rk-item-masonry--hover',
+        bgSrc: 'assets/img/project-11.jpg'
+      });
+    </script>
 </body>
+
 </html>
